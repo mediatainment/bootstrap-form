@@ -62,6 +62,7 @@ Then, you get something like this:
 * bootstrap_text_field
 * bootstrap_password_field
 * bootstrap_collection_select
+* bootstrap_select
 * bootstrap_file_field
 * bootstrap_text_area
 * bootstrap_email_field
