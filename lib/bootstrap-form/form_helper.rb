@@ -1,9 +1,9 @@
 module  ActionView
   module Helpers
     module FormHelper
-      
+
       BOOTSTRAP_OPTIONS = [:label, :hint].freeze
-      
+
       def bootstrap_text_field(object_name, method, options={})
         bootstrap_clearfix_wrap(object_name, method, text_field(object_name, method, extract_input_options(options)), options)
       end
@@ -18,6 +18,10 @@ module  ActionView
 
       def bootstrap_collection_select(object_name, method, collection, value_method, text_method, options = {}, html_options = {})
         bootstrap_clearfix_wrap(object_name, method, collection_select(object_name, method, collection, value_method, text_method, extract_input_options(options), html_options), options)
+      end
+
+      def bootstrap_select(object_name, method, choices, options, html_options)
+        bootstrap_clearfix_wrap(object_name, method, select(object_name, method, choices, extract_input_options(options), html_options), options)
       end
 
       def bootstrap_file_field(object_name, method, options={})
@@ -44,9 +48,9 @@ module  ActionView
         message_span = ActiveSupport::SafeBuffer.new(" #{messages.to_sentence}")
         content_tag(:span, message_span, :class => 'help-inline')
       end
-      
+
       private
-      
+
       def extract_input_options(options)
         options.except(*BOOTSTRAP_OPTIONS)
       end
@@ -69,6 +73,10 @@ class ActionView::Helpers::FormBuilder #:nodoc:
 
   def bootstrap_collection_select(method, collection, value_method, text_method, options = {}, html_options = {})
     @template.bootstrap_collection_select(@object_name, method, collection, value_method, text_method, objectify_options(options), html_options)
+  end
+
+  def bootstrap_select(method, choices, options={}, html_options={})
+    @template.bootstrap_select(@object_name, method, choices, objectify_options(options), html_options)
   end
 
   def bootstrap_file_field(method, options={})

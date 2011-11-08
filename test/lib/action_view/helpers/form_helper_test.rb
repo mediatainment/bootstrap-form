@@ -110,6 +110,16 @@ class FormHelperTest < ActionView::TestCase
     assert_equal html, bootstrap_collection_select(:post, :name, collection, :id ,:name, options)
   end
 
+  def test_bootstrap_select
+    choices, select_html, html = mock, mock, mock
+    options = { :object => mock }
+
+    mock(self).select(:post, :name, choices, options, {}) { select_html }
+    mock(self).bootstrap_clearfix_wrap(:post, :name, select_html, options.dup) { html }
+
+    assert_equal html, bootstrap_select(:post, :name, choices, options, {})
+  end
+
   def test_bootstrap_file_field
     html, text_field = mock, mock
     options = { :object => mock }
@@ -136,5 +146,6 @@ class FormHelperTest < ActionView::TestCase
     mock(self).bootstrap_clearfix_wrap(:post, :description, text_area, options.dup) { html }
     assert_equal html, bootstrap_text_area(:post, :description, options)
   end
-  
+
+
 end
