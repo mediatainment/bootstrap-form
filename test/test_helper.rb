@@ -21,6 +21,7 @@ end
 BootstrapForm::Application.routes.draw do
   get '/:controller(/:action(/:id))'
 end
+BootstrapForm::Application.config.secret_key_base = 'bootstrap'
 
 ActionController::Base.send :include, BootstrapForm::Application.routes.url_helpers
 
