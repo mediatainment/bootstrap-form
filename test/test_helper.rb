@@ -19,11 +19,11 @@ module BootstrapForm
 end
 
 BootstrapForm::Application.routes.draw do
-  match '/:controller(/:action(/:id))'
+  get '/:controller(/:action(/:id))'
 end
 
 ActionController::Base.send :include, BootstrapForm::Application.routes.url_helpers
 
-class Test::Unit::TestCase
+class MiniTest::Unit::TestCase
   include RR::Adapters::TestUnit
 end
