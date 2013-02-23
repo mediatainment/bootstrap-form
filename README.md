@@ -4,6 +4,8 @@ Form Helpers to make your form inputs [look like this](http://twitter.github.com
 
 Helps you to create beautiful mocks really quickly.
 
+Works with Bootstrap 2.3.0 and Rails 3.2+ (including Rails 4)
+
 ## Usage
 
 Add the gem to your Gemfile
@@ -30,10 +32,10 @@ You write this:
 
 You get something like this:
 
-    <div class="clearfix">
-      <label for="account_name">Name</label>
-      <div class="input">
-        <input class="xlarge" id="account_name" name="account_name" size="30" type="text">
+    <div class="control-group">
+      <label class="control-label" for="account_name">Name</label>
+      <div class="controls">
+        <input id="account_name" name="account_name" size="30" type="text">
       </div>
     </div>
 
@@ -50,10 +52,10 @@ option:
 
 Then, you get something like this:
 
-    <div class="clearfix">
-      <label for="account_name">A custom label</label>
-      <div class="input">
-        <input class="xlarge" id="account_name" name="account_name" size="30" type="text">
+    <div class="control-group">
+      <label class="control-label" for="account_name">A custom label</label>
+      <div class="controls">
+        <input id="account_name" name="account_name" size="30" type="text">
       </div>
     </div>
 
@@ -69,7 +71,7 @@ Then, you get something like this:
 
 ## Error handling
 
-All fields will automatically add the classes to show errors with the Twitter
+All fields will automatically add the classes to show errors with Twitter
 bootstrap styles.
 
 ## TODO
