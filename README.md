@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/dabit/bootstrap-form.png?branch=master)](https://travis-ci.org/dabit/bootstrap-form)
 
-Form Helpers to make your form inputs [look like this](http://twitter.github.com/bootstrap/#forms).
+Form Helpers to make your form inputs [look like this](http://twitter.github.io/bootstrap/base-css.html#forms).
 
 Helps you to create beautiful mocks really quickly.
 
