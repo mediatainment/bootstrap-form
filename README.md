@@ -6,7 +6,9 @@ Form Helpers to make your form inputs [look like this](http://twitter.github.io/
 
 Helps you to create beautiful mocks really quickly.
 
-Works with Bootstrap 2.3.0 and Rails 3.2+ (including Rails 4)
+Works with Bootstrap 3 and Rails 3.2+ (including Rails 4)
+
+For older versions of Bootstrap use version 1.0.x of this gem.
 
 ## Usage
 
