@@ -36,11 +36,9 @@ You write this:
 
 You get something like this:
 
-    <div class="control-group">
+    <div class="form-group">
       <label class="control-label" for="account_name">Name</label>
-      <div class="controls">
-        <input id="account_name" name="account_name" size="30" type="text">
-      </div>
+      <input class="form-control" id="account_name" name="account_name" size="30" type="text">
     </div>
 
 Pretty straight forward.
@@ -56,11 +54,9 @@ option:
 
 Then, you get something like this:
 
-    <div class="control-group">
+    <div class="form-group">
       <label class="control-label" for="account_name">A custom label</label>
-      <div class="controls">
-        <input id="account_name" name="account_name" size="30" type="text">
-      </div>
+      <input class="form-control" id="account_name" name="account_name" size="30" type="text">
     </div>
 
 ## Current Helpers List
