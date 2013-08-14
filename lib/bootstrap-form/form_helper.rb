@@ -45,7 +45,7 @@ module  ActionView
         inline_help       = inline_help_tag(error_messages.presence || options[:hint])
 
         content_tag(:div, label(object_name, method, options[:label], :class => 'control-label') +
-            content_tag(:div, content + inline_help, :class => 'controls'),
+            content + inline_help,
             :class => control_group_tag)
       end
 

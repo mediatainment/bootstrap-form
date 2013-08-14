@@ -9,7 +9,7 @@ class FormHelperTest < ActionView::TestCase
     stub(object).errors { errors }
     stub(object).name   { 'Object Name' }
 
-    expected_code = %{<div class="form-group"><label class="control-label" for="post_name">Name</label><div class="controls">content</div></div>}
+    expected_code = %{<div class="form-group"><label class="control-label" for="post_name">Name</label>content</div>}
     assert_equal expected_code, bootstrap_control_group_wrap(:post, :name, content, options)
   end
 
@@ -21,7 +21,7 @@ class FormHelperTest < ActionView::TestCase
     stub(object).errors { errors }
     stub(object).name   { 'Object Name' }
 
-    expected_code = %{<div class="form-group"><label class="control-label" for="post_name">Custom</label><div class="controls">content</div></div>}
+    expected_code = %{<div class="form-group"><label class="control-label" for="post_name">Custom</label>content</div>}
     assert_equal expected_code, bootstrap_control_group_wrap(:post, :name, content, options)
   end
 
@@ -33,7 +33,7 @@ class FormHelperTest < ActionView::TestCase
     stub(object).errors { errors }
     stub(object).name   { 'Object Name' }
 
-    expected_code = %{<div class="form-group has-error"><label class="control-label" for="post_name">Name</label><div class="controls">content<span class="help-block"> can't be blank</span></div></div>}
+    expected_code = %{<div class="form-group has-error"><label class="control-label" for="post_name">Name</label>content<span class="help-block"> can't be blank</span></div>}
     assert_equal expected_code, bootstrap_control_group_wrap(:post, :name, content, options)
   end
 
@@ -45,7 +45,7 @@ class FormHelperTest < ActionView::TestCase
     stub(object).errors { errors }
     stub(object).name   { 'Object Name' }
 
-    expected_code = %{<div class="form-group has-error"><label class="control-label" for="post_name">Name</label><div class="controls">content<span class="help-block"> has already been taken, is reserved, and must be odd</span></div></div>}
+    expected_code = %{<div class="form-group has-error"><label class="control-label" for="post_name">Name</label>content<span class="help-block"> has already been taken, is reserved, and must be odd</span></div>}
     assert_equal expected_code, bootstrap_control_group_wrap(:post, :name, content, options)
   end
 
@@ -57,7 +57,7 @@ class FormHelperTest < ActionView::TestCase
     stub(object).errors { errors }
     stub(object).name   { 'Object Name' }
 
-    expected_code = %{<div class="form-group"><label class="control-label" for="post_name">Name</label><div class="controls">content<span class="help-block"> format matters</span></div></div>}
+    expected_code = %{<div class="form-group"><label class="control-label" for="post_name">Name</label>content<span class="help-block"> format matters</span></div>}
     assert_equal expected_code, bootstrap_control_group_wrap(:post, :name, content, options)
   end
 
@@ -69,7 +69,7 @@ class FormHelperTest < ActionView::TestCase
     stub(object).errors { errors }
     stub(object).name   { 'Object Name' }
 
-    expected_code = %{<div class="form-group has-error"><label class="control-label" for="post_name">Name</label><div class="controls">content<span class="help-block"> can't be blank</span></div></div>}
+    expected_code = %{<div class="form-group has-error"><label class="control-label" for="post_name">Name</label>content<span class="help-block"> can't be blank</span></div>}
     assert_equal expected_code, bootstrap_control_group_wrap(:post, :name, content, options)
   end
 
