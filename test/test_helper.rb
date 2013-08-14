@@ -24,7 +24,3 @@ end
 BootstrapForm::Application.config.secret_key_base = 'bootstrap'
 
 ActionController::Base.send :include, BootstrapForm::Application.routes.url_helpers
-
-class MiniTest::Unit::TestCase
-  include RR::Adapters::TestUnit
-end
