@@ -3,10 +3,10 @@ $:.push File.expand_path("../lib", __FILE__)
 require "bootstrap-form/version"
 
 Gem::Specification.new do |s|
-  s.name        = "bootstrap-form"
+  s.name        = "mediatainment-bootstrap-form"
   s.version     = Bootstrap::Form::VERSION
   s.authors     = ["David Padilla"]
-  s.email       = ["david@crowdint.com"]
+  s.email       = ["mail@mediatainment-productions.com"]
   s.homepage    = ""
   s.summary     = %q{Twitter Bootstrap Form helpers}
   s.description = %q{Twitter Bootstrap Form helpers}
