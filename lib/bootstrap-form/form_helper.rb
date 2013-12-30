@@ -46,7 +46,8 @@ module  ActionView
         messages = Array.wrap(messages)
         return '' if messages.empty?
         message_span = ActiveSupport::SafeBuffer.new(" #{messages.to_sentence}")
-        content_tag(:span, message_span, :class => 'help-inline')
+        span_tag = content_tag(:span, message_span, class: "label label-important")
+        content_tag(:p, span_tag, :class => 'error help-block')
       end
 
       private
